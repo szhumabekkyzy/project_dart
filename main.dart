@@ -1,144 +1,152 @@
 import 'dart:io';
 
-// void main() {
-//   stdout.write('Введите первое число: ');
-//   var a = int.parse(stdin.readLineSync()!);
-
-//   stdout.write('Введите второе число: ');
-//   var b = int.parse(stdin.readLineSync()!);
-
-//   print('Сумма: ${a + b}');
-//   print('Разность: ${a - b}');
-// }    ==первое задание==
-
-// void main() {
-//   stdout.write('Введите число: ');
-//   var num = int.parse(stdin.readLineSync()!);
-//   if (num % 5 == 0) {
-//     print('Число кратно 5');
-//   } else {
-//     print('Число не кратно 5');
+// int sumToN(int n) {
+//   if (n <= 0) return 0;
+//   int sum = 0;
+//   for (int i = 1; i <= n; i++) {
+//     sum += i;
 //   }
-// }  // ==второе задание==
-
-// void main() {
-//   stdout.write('Введите первое число: ');
-//   var a = int.parse(stdin.readLineSync()!);
-
-//   stdout.write('Введите второе число: ');
-//   var b = int.parse(stdin.readLineSync()!);
-
-//   stdout.write('Введите третье число: ');
-//   var c = int.parse(stdin.readLineSync()!);
-
-//   var max = a;
-
-//   if (b > max) max = b;
-//   if (c > max) max = c;
-
-//   print('Наибольшее число: $max');
-// }  // ==третье задание==
-
-// void main() {
-//   stdout.write('Введите число: ');
-//   var num = int.parse(stdin.readLineSync()!);
-
-//   if (num >= 100 && num <= 999) {
-//     print('Число в диапазоне 100–999');
-//   } else {
-//     print('Число вне диапазона');
-//   }
+//   return sum;
 // }
-// // ==четвертое задание==
 
 // void main() {
-//   stdout.write('Введите логин: ');
-//   var login = stdin.readLineSync()!;
-
-//   stdout.write('Введите пароль: ');
-//   var password = stdin.readLineSync()!;
-
-//   if (login == 'admin' && password == 'dart123') {
-//     print('Доступ разрешён');
-//   } else {
-//     print('Неверный логин или пароль');
-//   }
+//   print(sumToN(5));
+//   print(sumToN(1));
+//   print(sumToN(0));
 // }
-// // // ==пятое задание==
 
-// void main() {
-//   stdout.write('Введите ваш возраст: ');
-//   var age = int.parse(stdin.readLineSync()!);
+//первое задание
 
-//   var result = age >= 18 ? 'Взрослый' : 'Несовершеннолетний';
-//   print(result);
+// int sumList(List<int> nums) {
+//   int sum = 0;
+//   for (int n in nums) {
+//     sum += n;
+//   }
+//   return sum;
 // }
-// // // ==шестое задание==
 
+// // Проверка
 // void main() {
-//   stdout.write('Введите ваш вес (кг): ');
-//   var weight = double.parse(stdin.readLineSync()!);
-
-//   stdout.write('Введите ваш рост (см): ');
-//   var heightCm = double.parse(stdin.readLineSync()!);
-
-//   var heightM = heightCm / 100;
-
-//   var bmi = weight / (heightM * heightM);
-
-//   if (bmi < 18.5) {
-//     print('Недостаточная масса');
-//   } else if (bmi < 25) {
-//     print('Норма');
-//   } else if (bmi < 30) {
-//     print('Избыточная масса');
-//   } else {
-//     print('Ожирение');
-//   }
+//   print(sumList([1, 2, 3])); // 6
+//   print(sumList([])); // 0
+//   print(sumList([5, 7, 3])); // 15
 // }
-// // // ==седьмое задание==
+// //второе задание
 
-// void main() {
-//   stdout.write('Введите число: ');
-//   var num = int.parse(stdin.readLineSync()!);
-
-//   if (num % 4 == 0 && num % 6 == 0) {
-//     print('Делится на 4 и 6');
-//   } else if (num % 4 == 0) {
-//     print('Делится только на 4');
-//   } else if (num % 6 == 0) {
-//     print('Делится только на 6');
-//   } else {
-//     print('Не делится одновременно на 4 и 6');
+// List<int> minMax(List<int> nums) {
+//   if (nums.isEmpty) {
+//     throw ArgumentError('Список пустой');
 //   }
-// } // ==восьмое задание==
 
-// void main() {
-//   stdout.write('Введите строку: ');
-//   var text = stdin.readLineSync()!;
+//   int min = nums[0];
+//   int max = nums[0];
 
-//   if (text.isEmpty) {
-//     print('Строка пуста');
-//   } else {
-//     print('Строка не пуста');
+//   for (int n in nums) {
+//     if (n < min) min = n;
+//     if (n > max) max = n;
 //   }
-// } // ==девятое задание==
 
-void main() {
-  stdout.write('Введите ваш возраст: ');
-  var age = int.parse(stdin.readLineSync()!);
+//   return [min, max];
+// }
 
-  stdout.write('Есть ли у вас водительское удостоверение (да/нет): ');
-  var licenseInput = stdin.readLineSync()!;
-  var hasLicense = licenseInput.toLowerCase() == 'да';
-  if (age < 18) {
-    print('Несовершеннолетний');
-  } else {
-    if (hasLicense) {
-      print('Можно водить');
-    } else {
-      print('Нет водительского удостоверения');
+// // Проверка
+// void main() {
+//   print(minMax([3, 1, 7])); // [1, 7]
+//   print(minMax([5])); // [5, 5]
+// }
+// //третье задание
+
+// int countEven(List<int> nums) {
+//   int count = 0;
+//   for (int n in nums) {
+//     if (n % 2 == 0) count++;
+//   }
+//   return count;
+// }
+
+// // Проверка
+// void main() {
+//   print(countEven([1, 2, 4, 5])); // 2
+//   print(countEven([])); // 0
+//   print(countEven([1, 3, 5])); // 0
+//   print(countEven([4, 6, 8])); // 3
+// }
+// //четвертое задание
+
+// List<int> reverseList(List<int> nums) {
+//   List<int> result = [];
+//   for (int i = nums.length - 1; i >= 0; i--) {
+//     result.add(nums[i]);
+//   }
+//   return result;
+// }
+
+// // Проверка
+// void main() {
+//   print(reverseList([1, 2, 3])); // [3, 2, 1]
+//   print(reverseList([])); // []
+// }
+// //пятое задание
+
+// List<int> nonNegative(List<int> nums) {
+//   List<int> result = [];
+//   for (int n in nums) {
+//     if (n >= 0) result.add(n);
+//   }
+//   return result;
+// }
+
+// // Проверка
+// void main() {
+//   print(nonNegative([-2, 0, 3])); // [0, 3]
+//   print(nonNegative([-1, -5]));   // []
+// }
+// //шестое задание
+
+// List<int> removeAll(List<int> nums, int x) {
+//   List<int> result = [];
+//   for (int n in nums) {
+//     if (n != x) result.add(n);
+//   }
+//   return result;
+// }
+
+// // Проверка
+// void main() {
+//   print(removeAll([1, 2, 2, 3], 2)); // [1, 3]
+//   print(removeAll([2, 2], 2));       // []
+// }
+// //седьмое задание
+
+// int countUnique(List<int> nums) {
+//   return nums.toSet().length;
+// }
+
+// // Проверка
+// void main() {
+//   print(countUnique([1, 1, 2])); // 2
+//   print(countUnique([]));        // 0
+//   print(countUnique([5, 5, 5])); // 1
+// }
+// //восьмое задание
+
+List<int> uniqueInOrder(List<int> nums) {
+  Set<int> seen = {};
+  List<int> result = [];
+
+  for (int n in nums) {
+    if (!seen.contains(n)) {
+      seen.add(n);
+      result.add(n);
     }
   }
+
+  return result;
 }
-// ==десятое задание==
+
+// Проверка
+void main() {
+  print(uniqueInOrder([1, 2, 1, 3, 2])); // [1, 2, 3]
+  print(uniqueInOrder([4, 4, 4])); // [4]
+}
+//девятое задание
