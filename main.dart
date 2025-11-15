@@ -1,152 +1,71 @@
-import 'dart:io';
-
-// int sumToN(int n) {
-//   if (n <= 0) return 0;
-//   int sum = 0;
-//   for (int i = 1; i <= n; i++) {
-//     sum += i;
-//   }
-//   return sum;
-// }
-
-// void main() {
-//   print(sumToN(5));
-//   print(sumToN(1));
-//   print(sumToN(0));
-// }
-
-//первое задание
-
-// int sumList(List<int> nums) {
-//   int sum = 0;
-//   for (int n in nums) {
-//     sum += n;
-//   }
-//   return sum;
-// }
-
-// // Проверка
-// void main() {
-//   print(sumList([1, 2, 3])); // 6
-//   print(sumList([])); // 0
-//   print(sumList([5, 7, 3])); // 15
-// }
-// //второе задание
-
-// List<int> minMax(List<int> nums) {
-//   if (nums.isEmpty) {
-//     throw ArgumentError('Список пустой');
-//   }
-
-//   int min = nums[0];
-//   int max = nums[0];
-
-//   for (int n in nums) {
-//     if (n < min) min = n;
-//     if (n > max) max = n;
-//   }
-
-//   return [min, max];
-// }
-
-// // Проверка
-// void main() {
-//   print(minMax([3, 1, 7])); // [1, 7]
-//   print(minMax([5])); // [5, 5]
-// }
-// //третье задание
-
-// int countEven(List<int> nums) {
-//   int count = 0;
-//   for (int n in nums) {
-//     if (n % 2 == 0) count++;
-//   }
-//   return count;
-// }
-
-// // Проверка
-// void main() {
-//   print(countEven([1, 2, 4, 5])); // 2
-//   print(countEven([])); // 0
-//   print(countEven([1, 3, 5])); // 0
-//   print(countEven([4, 6, 8])); // 3
-// }
-// //четвертое задание
-
-// List<int> reverseList(List<int> nums) {
-//   List<int> result = [];
-//   for (int i = nums.length - 1; i >= 0; i--) {
-//     result.add(nums[i]);
-//   }
-//   return result;
-// }
-
-// // Проверка
-// void main() {
-//   print(reverseList([1, 2, 3])); // [3, 2, 1]
-//   print(reverseList([])); // []
-// }
-// //пятое задание
-
-// List<int> nonNegative(List<int> nums) {
-//   List<int> result = [];
-//   for (int n in nums) {
-//     if (n >= 0) result.add(n);
-//   }
-//   return result;
-// }
-
-// // Проверка
-// void main() {
-//   print(nonNegative([-2, 0, 3])); // [0, 3]
-//   print(nonNegative([-1, -5]));   // []
-// }
-// //шестое задание
-
-// List<int> removeAll(List<int> nums, int x) {
-//   List<int> result = [];
-//   for (int n in nums) {
-//     if (n != x) result.add(n);
-//   }
-//   return result;
-// }
-
-// // Проверка
-// void main() {
-//   print(removeAll([1, 2, 2, 3], 2)); // [1, 3]
-//   print(removeAll([2, 2], 2));       // []
-// }
-// //седьмое задание
-
-// int countUnique(List<int> nums) {
-//   return nums.toSet().length;
-// }
-
-// // Проверка
-// void main() {
-//   print(countUnique([1, 1, 2])); // 2
-//   print(countUnique([]));        // 0
-//   print(countUnique([5, 5, 5])); // 1
-// }
-// //восьмое задание
-
-List<int> uniqueInOrder(List<int> nums) {
-  Set<int> seen = {};
-  List<int> result = [];
-
-  for (int n in nums) {
-    if (!seen.contains(n)) {
-      seen.add(n);
-      result.add(n);
-    }
-  }
-
-  return result;
-}
-
-// Проверка
 void main() {
-  print(uniqueInOrder([1, 2, 1, 3, 2])); // [1, 2, 3]
-  print(uniqueInOrder([4, 4, 4])); // [4]
+  //   var numbers = [2, 5, 8, 11, 14];
+
+  //   for (var n in numbers) {
+  //     if (n % 2 == 0) {
+  //       print(n);
+  //     }
+  //   }
+  //   task 1
+
+  // var numbers = [2, 5, 8];
+  // var multiplied = numbers.map((n) => n * 3).toList();
+  // print(multiplied);
+  //   task 2
+
+  // List<int> filterGreaterThan10(List<int> list) {
+  //   return list.where((n) => n > 10).toList();
+  // }
+  // void main() {
+  //   print(filterGreaterThan10([5, 12, 18, 7])); // [12, 18]
+  // }
+  //   task 3
+
+  // var student = {'name': 'Аружан', 'score': 90};
+  // student['grade'] = 'A';
+  // print(student);
+  //   task 4
+
+  // var students = [
+  //   {'name': 'Аружан', 'score': 90},
+  //   {'name': 'Мади', 'score': 75},
+  //   {'name': 'Дана', 'score': 85}
+  // ];
+  // for (var s in students) {
+  //   if (s['score']! > 80) {
+  //     print(s['name']);
+  //   }
+  // }
+  //   task 5
+
+  // var data = {'a': 1, 'b': 2, 'c': 3};
+  // data.forEach((key, value) {
+  //   print('$key: $value');
+  // });
+  //   task 6
+
+  // var map = {'x': 10, 'y': 20, 'z': 30};
+  // var keysList = map.keys.toList();
+  // print(keysList);
+  //   task 7
+
+  // var keys = ['name', 'age'];
+  // var values = ['Sholpan', 22];
+
+  // var result = Map.fromIterables(keys, values);
+
+  // print(result);
+  //   task 8
+
+  // var map = {'a': 1, 'b': 2, 'c': 3};
+  // map.remove('b');
+  // print(map);
+  //   task 9
+
+  var map = {'x': 1, 'y': 2};
+
+  map.putIfAbsent('z', () => 0);
+
+  print(map);
 }
-//девятое задание
+//   task 10
