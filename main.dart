@@ -1,71 +1,89 @@
 void main() {
-  //   var numbers = [2, 5, 8, 11, 14];
+  String getFullName(String first, String last) {
+    return '$first $last';
+  }
+  // task1
 
-  //   for (var n in numbers) {
-  //     if (n % 2 == 0) {
-  //       print(n);
-  //     }
-  //   }
-  //   task 1
+  // bool isEven(int n) => n % 2 == 0;
+  // // task2
 
-  // var numbers = [2, 5, 8];
-  // var multiplied = numbers.map((n) => n * 3).toList();
-  // print(multiplied);
-  //   task 2
-
-  // List<int> filterGreaterThan10(List<int> list) {
-  //   return list.where((n) => n > 10).toList();
+  // void sendMessage(String text, {String sender = 'Система'}) {
+  //   print('$sender: $text');
   // }
+  // // task3
+
+  // int sumOneToTen() {
+  //   int sum = 0;
+  //   for (int i = 1; i <= 10; i++) {
+  //     sum += i;
+  //   }
+  //   return sum;
+  // }
+  // // task4
+
+  // int sum(int a, int b) => a + b;
+  // int multiply(int a, int b) => a * b;
+
+  // void calculate() {
+  //   print(sum(3, 4));
+  //   print(multiply(3, 4));
+  // }
+
+  // // task5
+
+  // void sayHello() {
+  //   print('Hello everyone');
+  // }
+  // // task1
+
+  // int square(int n) {
+  //   return n * n;
+  // }
+  // // task2
+
+  // int sum2(int a, int b) => a + b;
+
   // void main() {
-  //   print(filterGreaterThan10([5, 12, 18, 7])); // [12, 18]
+  //   print(sum2(3, 4));
   // }
-  //   task 3
+  // // task3
 
-  // var student = {'name': 'Аружан', 'score': 90};
-  // student['grade'] = 'A';
-  // print(student);
-  //   task 4
+  // int cube(int n) => n * n * n;
+  // // task4
 
-  // var students = [
-  //   {'name': 'Аружан', 'score': 90},
-  //   {'name': 'Мади', 'score': 75},
-  //   {'name': 'Дана', 'score': 85}
-  // ];
-  // for (var s in students) {
-  //   if (s['score']! > 80) {
-  //     print(s['name']);
-  //   }
+  // void showUser({required String name, required int age}) {
+  //   print('Имя: $name, возраст: $age');
   // }
-  //   task 5
+  // // task5
 
-  // var data = {'a': 1, 'b': 2, 'c': 3};
-  // data.forEach((key, value) {
-  //   print('$key: $value');
-  // });
-  //   task 6
+  // void greet({String name = 'Гость'}) {
+  //   print('Привет, $name!');
+  // }
+  // // вызов
+  // greet();
+  // // task6
 
-  // var map = {'x': 10, 'y': 20, 'z': 30};
-  // var keysList = map.keys.toList();
-  // print(keysList);
-  //   task 7
+  // void localExample() {
+  //   int hidden = 42; // доступна только внутри localExample()
+  //   print(hidden);
+  // }
+  // // task7
 
-  // var keys = ['name', 'age'];
-  // var values = ['Sholpan', 22];
+  // double getPi() => 3.14;
 
-  // var result = Map.fromIterables(keys, values);
+  // void main() {
+  //   print(getPi());
+  // }
+  // // task8
 
-  // print(result);
-  //   task 8
+  // bool isEven2(int n) {
+  //   return n % 2 == 0;
+  // }
+  // // task9
 
-  // var map = {'a': 1, 'b': 2, 'c': 3};
-  // map.remove('b');
-  // print(map);
-  //   task 9
-
-  var map = {'x': 1, 'y': 2};
-
-  map.putIfAbsent('z', () => 0);
-
-  print(map);
+  // void makeCoffee({String type = 'Американо', int sugar = 0}) {
+  //   print('Готовим кофе: $type, сахар: $sugar ложек');
+  // }
+  // // task10
+  // makeCoffee(type: 'Латте', sugar: 2);
 }
-//   task 10
